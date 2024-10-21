@@ -12,14 +12,16 @@ void main() {
 
   // Show the scrambled word to the user
   print("Unscramble this word: $scrambledWord");
+  print("_________________________________________");
 
   String guess = stdin.readLineSync()!;
 
+  print("_________________________________________");
   // Check if the user's guess is correct
   if (guess == word) {
-    print("Correct!");
+    print("🗸  Correct!");
   } else {
-    print("Sorry, the correct word was $word.");
+    print("ⓧ Sorry, the correct word was >> $word <<");
   }
 }
 
