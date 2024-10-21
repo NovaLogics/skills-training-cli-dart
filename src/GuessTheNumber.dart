@@ -9,6 +9,7 @@ void main() {
   int numberToGuess = random.nextInt(100) + 1;
 
   int guess;
+  int numberOfTries = 0;
 
   print("Welcome to Guess the Number!");
   print("Guess a number between 1 and 100");
@@ -18,6 +19,8 @@ void main() {
   do {
     print("\n> Enter your guess:");
 
+    numberOfTries++;
+
     guess = int.parse(stdin.readLineSync()!);
 
     if (guess > numberToGuess) {
@@ -26,7 +29,7 @@ void main() {
       print("Too low!");
     } else {
       print("_______ Congratulations! _______");
-      print("You guessed the correct number.");
+      print("You've guessed the number in $numberOfTries tries.");
       print("_______________________________");
     }
   } while (guess != numberToGuess);
